@@ -1,6 +1,8 @@
-# Oddx
+# Oddx - Convert sporting odds to any format
 
-TODO: Delete this and the text below, and describe your gem
+Oddx is a ruby library designed to simplify conversion of sporting odds to alternate formats.
+
+## Installation
 
 Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/oddx`. To experiment with that code, run `bin/console` for an interactive prompt.
 
@@ -18,7 +20,19 @@ If bundler is not being used to manage dependencies, install the gem by executin
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require "oddx"
+
+class HelloOddx
+  def convert_moneyline_odds(moneyline_odds)
+    converter = Oddx.parse(moneyline_odds)
+
+    puts "Fractional: #{converter.fractional}"
+    puts "Decimal: #{converter.decimal}"
+    puts "Implied Probability: #{converter.probability}"
+  end
+end
+```
 
 ## Development
 
@@ -28,4 +42,4 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/oddx.
+Bug reports and pull requests are welcome on GitHub at https://github.com/sportsroom/oddx.
