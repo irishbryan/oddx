@@ -7,17 +7,16 @@ module Oddx
     REGEX = /^(?<mod>\+|-)(?<value>\d+\.?\d+)$/
 
     def initialize(odds)
-      @regex_match = odds.match(REGEX)
-
-      case @regex_match[:mod]
+      @odds = odds
+      regex_match = @odds.match(REGEX)
+      case regex_match[:mod]
       when "+"
-        @bigdecimal_odds = BigDecimal((@regex_match[:value].to_f / 100) + 1,
+        @bigdecimal_odds = BigDecimal((regex_match[:value].to_f / 100) + 1,
                                       Oddx::Odds::BIGDECIMAL_SIG_DIGITS)
       else
-        @bigdecimal_odds = BigDecimal((100 / @regex_match[:value].to_f) + 1,
+        @bigdecimal_odds = BigDecimal((100 / regex_match[:value].to_f) + 1,
                                       Oddx::Odds::BIGDECIMAL_SIG_DIGITS)
       end
-      super(odds)
     end
 
     def moneyline

@@ -5,10 +5,9 @@ require "bigdecimal"
 module Oddx
   class Odds
     BIGDECIMAL_SIG_DIGITS = 3
-    protected attr_accessor :bigdecimal_odds
 
-    def initialize(odds)
-      @odds = odds
+    def initialize
+      raise NotImplementedError
     end
 
     def decimal

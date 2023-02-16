@@ -7,8 +7,8 @@ module Oddx
     REGEX = /^(?<val>\d*\.?\d+$)/
 
     def initialize(odds)
+      @odds = odds
       @bigdecimal_odds = BigDecimal(odds, Oddx::Odds::BIGDECIMAL_SIG_DIGITS)
-      super(odds)
     end
 
     def decimal

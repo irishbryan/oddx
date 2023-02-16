@@ -7,9 +7,9 @@ module Oddx
     REGEX = /^(?<value>\d+\.?\d+)?%/
 
     def initialize(odds)
+      @odds = odds
       @bigdecimal_odds = BigDecimal(1 / (odds.to_f / 100),
-                                    Oddx::Odds::BIGDECIMAL_SIG_DIGITS)
-      super(odds)
+                                   Oddx::Odds::BIGDECIMAL_SIG_DIGITS)
     end
 
     def probability
