@@ -30,7 +30,17 @@ end
 ```
 
 ```shell
+> OddxExample.convert("+2040")
+Fractional: 102/5
+Decimal: 21.4
+Implied Probability: 4.7%
+Moneyline: +2040
 
+> OddxExample.convert("4/1")
+Fractional: 4/1
+Decimal: 5
+Implied Probability: 20%
+Moneyline: +400
 ```
 
 ## Development
