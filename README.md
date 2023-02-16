@@ -6,11 +6,11 @@ Oddx is a ruby library designed to simplify conversion of sporting odds to alter
 
 Install the gem and add to the application's Gemfile by executing:
 
-    `$ bundle add oddx`
+    $ bundle add oddx
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    `$ gem install oddx`
+    $ gem install oddx
 
 ## Usage
 
