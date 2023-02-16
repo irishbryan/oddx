@@ -2,6 +2,8 @@
 
 Oddx is a ruby library designed to simplify conversion of sporting odds to alternate formats.
 
+[![Tests](https://github.com/sportsroom/oddx/actions/workflows/tests.yml/badge.svg)](https://github.com/sportsroom/oddx/actions/workflows/tests.yml)
+
 ## Installation
 
 Install the gem and add to the application's Gemfile by executing:
