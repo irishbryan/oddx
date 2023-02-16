@@ -1,6 +1,6 @@
 # Oddx - Convert sporting odds to any format
 
-Oddx is a ruby library designed to simplify conversion of sporting odds to alternate formats.
+Oddx is a ruby library designed to simplify conversion of sporting odds to alternate formats (e.g. 3/1 » +300).
 
 [![Gem Version](https://badge.fury.io/rb/oddx.svg)](https://badge.fury.io/rb/oddx) [![Tests](https://github.com/sportsroom/oddx/actions/workflows/tests.yml/badge.svg)](https://github.com/sportsroom/oddx/actions/workflows/tests.yml)
 
