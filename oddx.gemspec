@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
   spec.authors = ["irishbryan"]
   spec.email = ["bbyrne@gmail.com"]
 
-  spec.summary = "Convert sporting odds to any format."
+  spec.summary = "Convert sports betting odds to any format (e.g. 3/1 » +300)."
   spec.homepage = "https://github.com/irishbryan/oddx"
   spec.required_ruby_version = ">= 2.6.0"
   spec.license = "MIT"

@@ -1,9 +1,7 @@
 # frozen_string_literal: true
 
-require_relative "odds"
-
 module Oddx
-  class ProbabilityOdds < Oddx::Odds
+  class ProbabilityOdds < Odds
     REGEX = /^(?<value>\d+\.?\d+)?%/
 
     def initialize(odds)
