@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require_relative "oddx/version"
+require_relative "oddx/odds"
 require_relative "oddx/decimal_odds"
 require_relative "oddx/fractional_odds"
 require_relative "oddx/moneyline_odds"
@@ -29,10 +30,10 @@ module Oddx
   #   4. probability (e.g. 95%, 30%)
 
   ODDS_FORMATS = [
-    Oddx::FractionalOdds,
-    Oddx::MoneylineOdds,
-    Oddx::DecimalOdds,
-    Oddx::ProbabilityOdds
+    FractionalOdds,
+    MoneylineOdds,
+    DecimalOdds,
+    ProbabilityOdds
   ]
 
   def self.parse(odds)
@@ -43,8 +44,8 @@ module Oddx
         end
       end
     rescue NoMethodError
-      raise Oddx::OddxError.new(msg: "Error parsing odds, provide as String to avoid ambiguity. e.g: '+4000'", odds: odds)
+      raise OddxError.new(msg: "Error parsing odds, provide as String to avoid ambiguity. e.g: '+4000'", odds: odds)
     end
-    raise Oddx::OddxError.new(odds: odds)
+    raise OddxError.new(odds: odds)
   end
 end
